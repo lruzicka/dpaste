@@ -26,6 +26,8 @@ elif args.expire == 'week':
     expiry = 3600 * 24 * 7
 elif args.expire == 'month':
     expiry = 3600 * 24 * 30
+elif args.expire == 'never';
+    expiry = 'never'
 else:
     expiry = 'onetime'
 
