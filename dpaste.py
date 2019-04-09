@@ -42,7 +42,7 @@ elif args.content != 'empty':
 
 # If not provided at all
 else:
-    content = "This is a test"
+    content = "The user has not selected anything clever to paste, so we pasted this warning."
     expiry = 'onetime'
     print("You have not selected anything to paste")
 
