@@ -42,6 +42,11 @@ if args.file != 'empty':
 elif args.content != 'empty':
     content = args.content
 
+# If provided by pipe
+elif sys.stdin:
+    lines = [line for line in sys.stdin]
+    content = "".join(lines)
+
 # If not provided at all
 else:
     content = "The user has not selected anything clever to paste, so we pasted this warning."
