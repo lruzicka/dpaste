@@ -12,6 +12,12 @@ This script can help you paste content from the CLI onto a web service at `dpast
 
 `python3 dpaste.py --file <file> --expire <time> --lexer <content_type>`
 
+### Using a pipe to send pastes
+
+You can also use a pipe to send text to dpaste, for example
+
+`journalctl -b | dpaste`
+
 When successful, the link to the pasted content will be printed to the console.
 
 ## Variables
