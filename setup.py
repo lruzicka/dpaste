@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="dpaste-console",
-    version="1.0.1",
+    version="1.0.2",
     py_modules=['dpaste'],
     author="Lukáš Růžička",
     author_email="lruzicka@redhat.com",

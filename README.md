@@ -6,11 +6,11 @@ This script can help you paste content from the CLI onto a web service at `dpast
 
 ### Paste one liners
 
-`python3 dpaste.py --content <content> --expire <time> --lexer <content_type>`
+`dpaste --content <content> --expire <time> --lexer <content_type>`
 
 ### Pase a file content
 
-`python3 dpaste.py --file <file> --expire <time> --lexer <content_type>`
+`dpaste --file <file> --expire <time> --lexer <content_type>`
 
 ### Using a pipe to send pastes
 
@@ -52,6 +52,6 @@ More can be seen [in the Dpaste documentaton](https://docs.elephant.house/dpaste
 
 When you have a python script `program.py` and you want to paste it for a *week*, with *Python* highlighting, do:
 
-`python3 dpaste.py --file program.py --expire week --lexer python`
+`dpaste --file program.py --expire week --lexer python`
 
 You can also use `-f`, `-e`, and `-l` shortcuts to provide arguments.
