@@ -4,8 +4,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="Dpaste",
-    version="1.0.0",
+    name="dpaste-console",
+    version="1.0.1",
+    py_modules=['dpaste'],
     author="Lukáš Růžička",
     author_email="lruzicka@redhat.com",
     description="A copypaster for console",
@@ -15,7 +16,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: General Public License 3",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: OS Independent",
     ],
     entry_points={'console_scripts': ['dpaste = dpaste:main']}
