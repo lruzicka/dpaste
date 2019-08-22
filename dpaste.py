@@ -28,12 +28,12 @@ class Parser:
 
 class Dpaster:
     """ This class is the application functionality """
-    def __init__(self, api, args):
+    def __init__(self, api, arguments):
         """ Initialize the application Dpaste """
         self.api = api
-        self.args = args
-        self.expiry = None
-        self.lexer = args.lexer
+        self.args = arguments
+        self.expiry = arguments.expire 
+        self.lexer = arguments.lexer
         self.file = None
         self.content = None
         self.jsondata = None
