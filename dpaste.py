@@ -21,10 +21,10 @@ class Parser:
         self.parser.add_argument('-e', '--expire', default='hour', help='How long to keep the snippet online.')
         self.parser.add_argument('-c', '--content', default='empty', help='A content to be pasted to the webpage')
 
-    def provide_arguments(self):
+    def provide_arguments(self, args=None):
         """ Return arguments from the parser """
-        args = self.parser.parse_args()
-        return args
+        arguments = self.parser.parse_args(args)
+        return arguments
 
 class Dpaster:
     """ This class is the application functionality """
