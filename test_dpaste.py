@@ -8,7 +8,7 @@ def init_parser():
 
 def get_args():
     parser = init_parser()
-    return parser.provide_arguments
+    return parser.provide_arguments()
 
 def init_dpaste():
     arguments = get_args()
