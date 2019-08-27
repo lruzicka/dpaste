@@ -35,7 +35,7 @@ This variable sets how long the page will keep your snippet. You can use:
 
 This variable tells the engine how to highlight the content.
 
-* txt (default)
+* _text (default)
 * bash
 * c
 * html
