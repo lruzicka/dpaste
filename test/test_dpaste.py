@@ -6,17 +6,17 @@ def init_parser():
     argparser = dp.Parser()
     return argparser
 
-def get_args():
+def get_args(arguments):
     parser = init_parser()
-    return parser.provide_arguments(['-e','week','-l','python'])
+    return parser.provide_arguments(arguments)
 
-def init_dpaste():
-    arguments = get_args()
-    app = dp.Dpaster('https://dpaste.de/api/', arguments)
+def init_dpaste(arguments):
+    args = get_args(arguments)
+    app = dp.Dpaster('https://dpaste.de/api/', args)
     return app
 
-def _test_check_parser():
-    arguments = get_args()
+def test_check_parser():
+    arguments = get_args(['-f','file.in','-l','python','-e','week', '-c', 'Hej'])
     if arguments:
         value = True
     else:
@@ -24,7 +24,7 @@ def _test_check_parser():
     assert value == True
 
 def test_check_api():
-    app = init_dpaste()
+    app = init_dpaste([])
     assert app.api == 'https://dpaste.de/api/'
 
 def test_lejno():
