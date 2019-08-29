@@ -57,6 +57,12 @@ def test_get_paste_content():
     app.get_paste()
     assert app.content == 'TestLine'
 
+def test_get_paste_file():
+    app = init_dpaste(['-f', 'testfile'])
+    app.get_paste()
+    with open('./testfile') as infile:
+        fcontent = infile.readlines()[0]
+    assert app.content == fcontent
 
 #def test_convert_time():
 #    app = init_dpaste()
