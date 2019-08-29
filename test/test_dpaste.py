@@ -27,8 +27,36 @@ def test_check_api():
     app = init_dpaste([])
     assert app.api == 'https://dpaste.de/api/'
 
-def test_lejno():
-    pass
+def test_convert_time_hour():
+    app = init_dpaste(['-e','hour'])
+    app.convert_time()
+    assert app.expiry == 3600
+
+def test_convert_time_week():
+    app = init_dpaste(['-e','week'])
+    app.convert_time()
+    assert app.expiry == 604800
+
+def test_convert_time_month():
+    app = init_dpaste(['-e','month'])
+    app.convert_time()
+    assert app.expiry == 2592000
+
+def test_convert_time_never():
+    app = init_dpaste(['-e','never'])
+    app.convert_time()
+    assert app.expiry == 'never'
+
+def test_convert_time_day():
+    app = init_dpaste(['-e', 'day'])
+    app.convert_time()
+    assert app.expiry == 86400
+
+def test_get_paste_content():
+    app = init_dpaste(['-c', 'TestLine'])
+    app.get_paste()
+    assert app.content == 'TestLine'
+
 
 #def test_convert_time():
 #    app = init_dpaste()

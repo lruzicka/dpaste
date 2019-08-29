@@ -1,0 +1,3 @@
+[console_scripts]
+dpaste = dpaste:main
+
