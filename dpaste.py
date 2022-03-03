@@ -103,7 +103,7 @@ def main():
     argparser = Parser()
     args = argparser.provide_arguments()
 
-    application = Dpaster('https://dpaste.de/api/', args)
+    application = Dpaster('https://dpaste.org/api/', args)
 
     # Calculate time in seconds to replace keywords.
     application.convert_time()
