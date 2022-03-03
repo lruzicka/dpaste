@@ -43,13 +43,13 @@ class Dpaster:
         if self.args.expire == 'hour':
             self.expiry = 3600
         elif self.args.expire == 'day':
-            self.expiry = 3600 * 24
+            self.expiry = 86400
         elif self.args.expire == 'week':
-            self.expiry = 3600 * 24 * 7
+            self.expiry = 604800
         elif self.args.expire == 'month':
-            self.expiry = 3600 * 24 * 30
-        elif self.args.expire == 'never':
-            self.expiry = 'never'
+            self.expiry = 2592000
+        elif self.args.expire == 'year':
+            self.expiry = '31536000'
         else:
             self.expiry = 'onetime'
         return self.expiry
@@ -96,6 +96,7 @@ class Dpaster:
             print(process.content.decode("utf-8"))
         else:
             print("Something went wrong, the content was not copied.")
+            print(process.content.decode("utf-8"))
             print(process.status_code)
 
 def main():
