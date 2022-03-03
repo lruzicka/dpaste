@@ -46,7 +46,7 @@ This variable tells the engine how to highlight the content.
 * tex
 * vim
 
-More can be seen [in the Dpaste documentaton](https://docs.elephant.house/dpaste/settings.html#settings).
+More can be seen [in the Dpaste documentaton](https://dpaste.readthedocs.io/en/latest/index.html).
 
 ## Example
 
